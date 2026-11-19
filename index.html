@@ -76,6 +76,8 @@
             font-weight: 600;
             transition: all 0.3s ease;
             white-space: nowrap;
+            flex: 1;
+            text-align: center;
         }
 
         .tab-btn.active, .tab-btn:hover {
@@ -188,65 +190,47 @@
         <p>Eksplorasi Teknologi Jaringan Komputer, Infrastruktur, dan Administrasi Sistem</p>
     </header>
 
-    <!-- Menu Navigasi Materi -->
+    <!-- Menu Navigasi Materi (Diringkas Menjadi 3) -->
     <div class="nav-tabs">
-        <button class="tab-btn active" onclick="switchTab(event, 'materi1')">1. Jaringan LAN & WAN</button>
-        <button class="tab-btn" onclick="switchTab(event, 'materi2')">2. Routing & Subnetting</button>
-        <button class="tab-btn" onclick="switchTab(event, 'materi3')">3. Fiber Optic</button>
-        <button class="tab-btn" onclick="switchTab(event, 'materi4')">4. Server & Linux</button>
-        <button class="tab-btn" onclick="switchTab(event, 'materi5')">5. Simulasi Ping</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'materi1')">1. Infrastruktur & Topologi</button>
+        <button class="tab-btn" onclick="switchTab(event, 'materi2')">2. Server & Fiber Optic</button>
+        <button class="tab-btn" onclick="switchTab(event, 'materi3')">3. Routing & Simulasi</button>
     </div>
 
-    <!-- Konten Materi 1 -->
+    <!-- Konten Materi 1: Gabungan LAN, WAN, & Topologi -->
     <div id="materi1" class="content-card active">
-        <h2>Infrastruktur Jaringan LAN & WAN</h2>
-        <p>Jaringan komputer adalah sistem yang menghubungkan beberapa perangkat komputer agar dapat saling berbagi sumber daya, data, dan informasi.</p>
+        <h2>Infrastruktur Jaringan LAN, WAN & Topologi</h2>
+        <p>Jaringan komputer adalah sistem yang menghubungkan beberapa perangkat komputer agar dapat saling berbagi sumber daya, data, dan informasi secara efisien.</p>
         <ul>
-            <li><strong>LAN (Local Area Network):</strong> Jaringan komputer yang mencakup wilayah kecil, seperti dalam satu ruangan, kantor, atau laboratorium sekolah. Menggunakan media kabel UTP atau Wi-Fi lokal.</li>
-            <li><strong>WAN (Wide Area Network):</strong> Jaringan yang mencakup area geografis yang sangat luas, antar kota, bahkan antar negara, umumnya menggunakan teknologi router dan leased line.</li>
-            <li><strong>Topologi Jaringan:</strong> Pola hubungan antar perangkat dalam jaringan, meliputi topologi Star (Bintang), Bus, Ring, Mesh, dan Tree.</li>
+            <li><strong>LAN (Local Area Network):</strong> Jaringan komputer yang mencakup wilayah kecil, seperti dalam satu ruangan, kantor, atau laboratorium sekolah menggunakan media kabel UTP atau Wi-Fi lokal.</li>
+            <li><strong>WAN (Wide Area Network):</strong> Jaringan yang mencakup area geografis yang sangat luas, antar kota, hingga antar negara, umumnya menggunakan teknologi router dan leased line.</li>
+            <li><strong>Topologi Jaringan:</strong> Pola hubungan antar perangkat dalam jaringan, meliputi topologi Star (Bintang), Bus, Ring, Mesh, dan Tree yang menentukan alur komunikasi data.</li>
         </ul>
     </div>
 
-    <!-- Konten Materi 2 -->
+    <!-- Konten Materi 2: Gabungan Fiber Optic & Server Linux -->
     <div id="materi2" class="content-card">
-        <h2>Konsep Routing & Subnetting IP</h2>
-        <p>Routing adalah proses pengiriman paket data dari suatu jaringan ke jaringan lain melalui router. Sementara Subnetting adalah teknik memecah jaringan besar menjadi beberapa sub-jaringan yang lebih kecil.</p>
+        <h2>Teknologi Fiber Optic & Server Linux</h2>
+        <p>Mempelajari media transmisi cahaya berkecepatan tinggi serta dasar pengelolaan layanan server jaringan berbasis sistem operasi teks (CLI).</p>
         <ul>
-            <li><strong>IPv4 & IPv6:</strong> Alamat pengenal unik untuk setiap perangkat di jaringan internet (Contoh IPv4: <code>192.168.1.1</code>).</li>
-            <li><strong>CIDR (Classless Inter-Domain Routing):</strong> Penulisan prefiks subnet mask, misalnya <code>/24</code> yang berarti netmask <code>255.255.255.0</code>.</li>
-            <li><strong>Routing Statis vs Dinamis:</strong> Routing statis dikonfigurasi secara manual oleh administrator, sedangkan routing dinamis (OSPF, BGP) memperbarui jalur secara otomatis.</li>
+            <li><strong>Fiber Optic:</strong> Media transmisi data menggunakan serat kaca/plastik halus. Terdiri dari <em>Single-Mode</em> (jarak jauh/antar kota) dan <em>Multi-Mode</em> (jarak dekat/antar gedung).</li>
+            <li><strong>DHCP Server:</strong> Layanan otomatisasi yang mendistribusikan alamat IP kepada setiap komputer klien di dalam jaringan.</li>
+            <li><strong>DNS Server (BIND9) & Web Server:</strong> DNS menerjemahkan IP numerik menjadi nama domain (misal: <code>smk.sch.id</code>), sementara Web Server (Apache/Nginx) menyiarkan halaman web via HTTP/HTTPS.</li>
         </ul>
     </div>
 
-    <!-- Konten Materi 3 -->
+    <!-- Konten Materi 3: Gabungan Routing, Subnetting, & Simulasi Ping -->
     <div id="materi3" class="content-card">
-        <h2>Teknologi Fiber Optic</h2>
-        <p>Fiber Optic adalah media transmisi data yang menggunakan kabel kaca atau plastik halus untuk mentransmisikan sinyal cahaya dari satu tempat ke tempat lain berkecepatan tinggi.</p>
+        <h2>Routing, Subnetting & Simulasi Jaringan</h2>
+        <p>Routing adalah proses pengiriman paket data antar jaringan, sementara subnetting memecah jaringan besar menjadi sub-jaringan yang lebih terstruktur.</p>
         <ul>
-            <li><strong>Single-Mode Fiber:</strong> Inti kabel sangat kecil, digunakan untuk transmisi jarak jauh dengan kapasitas besar (antar kota/pulau).</li>
-            <li><strong>Multi-Mode Fiber:</strong> Inti kabel lebih besar, umum digunakan untuk jaringan jarak dekat seperti antar gedung dalam satu kawasan kampus.</li>
-            <li><strong>Perangkat Pendukung:</strong> Media Converter, OLT (Optical Line Terminal), ONU/ONT di sisi pelanggan, serta SFP Module.</li>
+            <li><strong>IPv4 & CIDR:</strong> Alamat pengenal unik perangkat (contoh: <code>192.168.1.1</code>) dengan penulisan prefiks subnet mask seperti <code>/24</code> (<code>255.255.255.0</code>).</li>
+            <li><strong>Routing Statis & Dinamis:</strong> Konfigurasi jalur paket data secara manual oleh admin ataupun secara otomatis oleh protokol dinamis (OSPF/BGP).</li>
         </ul>
-    </div>
 
-    <!-- Konten Materi 4 -->
-    <div id="materi4" class="content-card">
-        <h2>Administrasi Server & Linux</h2>
-        <p>Sistem operasi jaringan berbasis teks (CLI) seperti Linux Debian atau Ubuntu menjadi standar industri dalam mengelola layanan server jaringan.</p>
-        <ul>
-            <li><strong>DHCP Server:</strong> Layanan yang memberikan alamat IP secara otomatis ke komputer klien.</li>
-            <li><strong>DNS Server (BIND9):</strong> Menerjemahkan alamat IP numerik menjadi nama domain yang mudah dibaca manusia (contoh: <code>smkbanjarasri.sch.id</code>).</li>
-            <li><strong>Web Server (Apache/Nginx):</strong> Menyiarkan halaman website agar dapat diakses melalui protocol HTTP/HTTPS.</li>
-        </ul>
-    </div>
-
-    <!-- Konten Materi 5: Simulasi Interaktif -->
-    <div id="materi5" class="content-card">
-        <h2>Simulasi Perintah Jaringan (Ping Test)</h2>
-        <p>Uji konektivitas jaringan secara virtual menggunakan utilitas <code>ping</code> untuk memeriksa apakah perangkat tujuan aktif dan terhubung.</p>
-        
+        <!-- Simulator Ping dipindah ke Materi 3 -->
         <div class="simulator-box">
+            <p style="margin-bottom: 8px; font-weight: bold; color: var(--accent-green);">Simulasi Perintah Jaringan (Ping Test)</p>
             <div class="simulator-controls">
                 <input type="text" id="targetIp" value="192.168.10.1" placeholder="Masukkan IP Target...">
                 <button class="action-btn" onclick="runPing()">Tes Ping</button>
